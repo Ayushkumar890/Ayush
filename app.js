@@ -16,7 +16,6 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-
 const UserSchema = new mongoose.Schema({
   username: {
     type: String,
