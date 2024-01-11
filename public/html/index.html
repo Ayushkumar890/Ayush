@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/style.css">
+
+
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" /> -->
+
+</head>
+<style>
+    input[type=checkbox] {
+        display: none;
+    }
+
+    .container img {
+
+        transition: transform 0.85s ease;
+
+    }
+
+    input[type=checkbox]:checked~label>img {
+        transform: scale(2);
+
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+
+<body class="bg-zinc-900 w-full">
+
+    <nav class="fixed z-50 w-full -mt-14 p-0 bg-zinc-900 border-b-2 border-yellow-300">
+        <div class="px-3 py-3 lg:px-5 lg:pl-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center justify-start">
+                    <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar"
+                        aria-controls="logo-sidebar" type="button"
+                        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden  focus:outline-none  dark:text-gray-400  ">
+                        <span class="sr-only">Open sidebar</span>
+                        <svg class="w-6 h-6 text-white dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                    <img src="images/A_logo.png" class="h-8 w-10 mr-3 color- rounded-full" alt="FlowBite Logo" />
+                    <span
+                        class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-white">Ayush</span>
+
+                </div>
+                <div class="flex items-center">
+                    <div class="flex items-center ml-3">
+                        <div>
+                            <div type="button"
+                                class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 "
+                                aria-expanded="false" data-dropdown-toggle="dropdown-user">
+
+                                <img class="w-12 h-12 rounded-full" src="images/AYUSH.jpg" alt="user photo">
+                            </div>
+                        </div>
+                        <div class="z-40 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
+                            id="dropdown-user">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <aside id="logo-sidebar"
+        class="fixed after:block top-0 left-0 z-40 h-full w-64 h-screen pt-20 transition-transform -translate-x-full  sm:translate-x-0 dark:bg-zinc-800 dark:border-yellow-700 border-2"
+        aria-label="Sidebar">
+        <div class="h-full px-3 pb-4 overflow-y-auto  bg-zinc-900 dark:bg-zinc-800 ">
+            <ul class="space-y-4  font-medium">
+                <li>
+                    <a href="/"
+                        class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group ">
+                        <svg class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                        <span class="ml-3 whitespace-nowrap">Home</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#About"
+                        class="flex items-center px-10  p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                        <span class="flex-1 ml-3 whitespace-nowrap">About</span>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#Projects"
+                        class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776" />
+                        </svg>
+
+                        <span class="flex-1 ml-3 whitespace-nowrap">Projects</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+                        </svg>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Skill</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/contact"
+                        class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="5.5" cy="11.5" r="4.5" />
+                            <circle cx="18.5" cy="11.5" r="4.5" />
+                            <line x1="5.5" y1="16" x2="18.5" y2="16" />
+                        </svg>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Contact</span>
+                    </a>
+                </li>
+                <li class="flex items-center py-4  rounded-lg dark:text-white  group">
+
+                    <span class="flex-1 ml-3 text-gray-500 whitespace-nowrap">Socials</span>
+
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/ayu.shkumar0911/"
+                        class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="h-5 w-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Instagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/ayush-kumar-40302b258/"
+                        class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="h-5 w-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                        <span class="flex-1 ml-3 whitespace-nowrap">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/Ayushkumar890"
+                        class="flex items-center px-10 p-3 px-1 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="h-5 w-5  text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Git-Hub</span>
+                    </a>
+                    <a href="https://twitter.com/Ayush__890"
+                        class="flex items-center px-10 p-3 px-1  text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                        </svg>
+
+                        <span class="flex-1 ml-3 whitespace-nowrap">Twitter</span>
+                    </a>
+                    <a href="mailto:ayushkumar2004.hp@gmail.com"
+                        class="flex items-center px-10 py-3 px-1 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="h-5 w-5  text-yellow-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        <span class="flex-1 ml-3 whitespace-nowrap">E-mail</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+
+    <div class="pt-0 sm:ml-64">
+
+        <div
+            class="flex rounded-lg w-full  mt-14 bg-[url('/images/background.jpg')] bg-no-repeat bg-center bg-cover border-b-2 border-yellow-300">
+            <div
+                class="container  flex justify-center md:rounded-ld overflow-visible md:px-10 py-5 bg-blur backdrop-filter backdrop-blur-md w-full gap-2 md:gap-10">
+                <div>
+                    <div type="button"
+                        class="flex text-sm bg-gray-800 bg-transparent rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                        aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                        <input type="checkbox" id="zoomCheck">
+                        <label for="zoomCheck">
+
+                            <img class=" rounded-full bg-transparent cursor-cell border-2 border-yellow-300 z-50"
+                                loading="lazy" decoding="async" width="128" height="120" style="color:transparent"
+                                src="images/AYUSH.jpg" alt="user photo">
+                        </label>
+                    </div>
+                </div>
+                <div class="flex md:flex-1 flex-col justify-center gap-4 ">
+                    <div class="flex justify-between items-center gap-5 ">
+                        <div class="text-3xl flex flex-col cursor-default  text-white font-bold text-highlight">Ayush
+                            <div class="text-sm font-semibold flex text-white justify-between items-center">@ayu.shkumar0911
+                                <a class="block md:hidden" target="_blank"
+                                    href="https://www.instagram.com/ayu.shkumar0911/"><button
+                                        class="h-max w-max flex gap-2 justify-center items-center rounded-md outline-0 active:scale-95 active:shadow-inner disabled:opacity-50 disabled:pointer-events-none disbaled:cursor-not-allowed bg-cardPrimary text-primary font-semibold text-xs p-2"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-instagram text-red-500">
+                                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                                        </svg></button></a>
+                            </div>
+                        </div>
+                        <a class="hidden md:block md:bg-green-900   rounded-xl text-white border-2 border-yellow-300"
+                            target="_blank" href="https://www.instagram.com/ayu.shkumar0911/"><button
+                                class="h-max w-max flex gap-4 justify-center items-center rounded-md outline-0 active:scale-95 active:shadow-inner disabled:opacity-50 disabled:pointer-events-none disbaled:cursor-not-allowed bg-cardPrimary text-primary font-semibold text-xs py-2 px-4"><svg
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-instagram">
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                                </svg><span class="hidden md:block ">Follow me on Instagram</span></button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="About" class=" p-4 text-white body-font">
+            <h1 class="md:ml-10 font-bold text-3xl text-yellow-300 ">About</h1>
+            <div class="container px-5 py-10 mx-auto">
+                <div class="flex flex-wrap -m-4">
+                    <div class="p-4 md:w-2/3  rounded-xl" data-aos="fade-up-down"
+                        data-aos-duration="2000">
+                        <div class="md:w-3/2 ">
+                            <h2 class="flex justify-center -pb-10 text-xl">
+                                Hey!
+                            </h2>
+                            <br>
+                            <p class="">
+                                🌟 Hey there, I'm Ayush, a 2nd-year Computer Science student at Chitkara University.
+                                Scored
+                                86% in 12th and now navigating the tech world.
+                                <br>
+                                <br>
+                                💻 Currently, I'm part of the tech squad at The Xiting Way. I'm fluent in Python, C, and
+                                Web
+                                Development - HTML, CSS, Bootstrap, and Javascript are my go-to tools.
+                                <br>
+                                <br>
+                                🚀My projects include a Quiz Game using Python Login Authentication system, and a
+                                Portfolio
+                                using HTML, CSS, Javascript, and Bootstrap.
+                                <br>
+                                <br>
+
+                                🤝 I work very well in a team and I also participated in Ceed Invest2.0 in which me and
+                                my
+                                team go to finals and my another skills is playing cricket and badminton.
+                                <br>
+                                <br>
+
+                                Excited to connect and explore new horizons!
+                            </p>
+                        </div>
+                    </div>
+                    <div class=" md:w-1/3" data-aos="fade-up-left" data-aos-duration="2000">
+                        <div class="h-full border-2 border-yellow-300 border-opacity-60 rounded-lg overflow-hidden">
+                            <a href="https://www.thexitingway.com/" target="_blank"><img
+                                    class="lg:h-48 md:h-36 w-[66vw] sm:w-full object-cover object-center"
+                                    src="images/txw.jpg" alt="txw"></a>
+
+                            <div class="p-6">
+                                <h2 class="tracking-widest text-xs title-font font-bold text-red-500 mb-1">Experience
+                                </h2>
+                                <!-- <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1> -->
+                                <p class="leading-relaxed mb-3">From - january-2023
+                                    <br>
+                                    To - present
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="Projects" class="text-gray-600 body-font ">
+            <div class="container px-5 py-20 mx-auto">
+                <h1 class="md:ml-10 font-bold text-yellow-300 -mt-20 md:mt-0 mb-10 text-2xl">Projects</h1>
+                <div class="flex justify-center flex-wrap -m-4">
+                    <div class="xl:w-1/4 md:w-1/2 p-4 " data-aos="flip-left" data-aos-duration="2000">
+                        <a href="https://github.com/Ayushkumar890/TXW-Space.github.io" target="_blank">
+                            <div class="sm:bg-yellow-200 z-40 pb-4 rounded-xl border-2 border-yellow-300 hover:bg-gradient-to-t from-yellow-500 to-yellow-100">
+                                <img class="h-40 z-20 rounded-t-lg w-full object-cover object-center mb-6 "
+                                    src="images/txw-space.png" alt="content">
+                                <h2 class="text-lg ml-4 text-white sm:text-black font-medium title-font mb-2">TXW-Space</h2>
+                                <p class="leading-relaxed text-white sm:text-black text-x ml-4">using HTML and CSS. &nbsp;&nbsp;</p>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="xl:w-1/4 md:w-1/2 p-4" data-aos="flip-left" data-aos-duration="2000">
+                        <a href="https://github.com/Ayushkumar890/login-authentication" target="_blank">
+                            <div class="sm:bg-yellow-200  pb-4 rounded-xl border-2 border-yellow-300 hover:bg-gradient-to-t from-yellow-500 to-yellow-100">
+                                <img class="h-40 rounded-t-lg w-full object-cover object-center mb-6"
+                                    src="images/login-authentication.png" alt="content">
+                                <h2 class="text-lg ml-4 text-white sm:text-black font-medium title-font mb-2">Login Authentication
+                                </h2>
+                                <p class="leading-relaxed text-white sm:text-black text-x ml-4">Using HTML , CSS and Javascript.</p>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="xl:w-1/4 md:w-1/2 p-4" data-aos="flip-left" data-aos-duration="2000">
+                        <a href="https://github.com/Ayushkumar890/Ayushkumar.github.io" target="_blank">
+                            <div class="sm:bg-yellow-200  pb-4 rounded-xl border-2 border-yellow-300 hover:bg-gradient-to-t from-yellow-500 to-yellow-100">
+                                <img class="h-40 rounded-t-lg w-full object-cover object-center mb-6"
+                                    src="images/old-portfolio.png" alt="content">
+                                <h2 class="text-lg ml-4 text-white sm:text-black font-medium title-font mb-2">My Old Portfolio</h2>
+                                <p class="leading-relaxed text-white sm:text-black text-x ml-4">HTML, CSS, Javascript and Bootstrap.
+                                </p>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="xl:w-1/4 md:w-1/2 p-4" data-aos="flip-left" data-aos-duration="2000">
+                        <a href="https://github.com/Ayushkumar890/Dice-game-by-ayush" target="_blank">
+                            <div class="sm:bg-yellow-200 pb-4 rounded-xl border-2 border-yellow-300 hover:bg-gradient-to-t from-yellow-500 to-yellow-100">
+                                <img class="h-40 rounded-t-lg w-full object-cover object-center mb-6"
+                                    src="images/dice-game.png" alt="content">
+                                <h2 class="text-lg ml-4 text-white sm:text-black  font-medium title-font mb-2">Dice Game</h2>
+                                <p class="leading-relaxed text-white sm:text-black text-x ml-4">HTML, CSS, Express and Bootstrap.</p>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+
+
+</body>
+
+</html>
