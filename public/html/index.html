@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Ayush-Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/public/style.css">
+    <link rel="icon" type="image/x-icon" href="/images/aaa.png">
 
 
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" /> -->
@@ -21,12 +22,10 @@
     .container img {
 
         transition: transform 0.85s ease;
-
     }
 
     input[type=checkbox]:checked~label>img {
         transform: scale(2);
-
     }
 
     html {
@@ -35,6 +34,9 @@
 </style>
 
 <body class="bg-zinc-900 w-full">
+
+
+    <!-- top navbar -->
 
     <nav class="fixed z-50 w-full -mt-14 p-0 bg-zinc-900 border-b-2 border-yellow-300">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
@@ -50,7 +52,7 @@
                                 d="M1 1h15M1 7h15M1 13h15" />
                         </svg>
                     </button>
-                    <img src="images/A_logo.png" class="h-8 w-10 mr-3 color- rounded-full" alt="FlowBite Logo" />
+                    <img src="images/A_logo.png" class="h-8 w-10 mr-3 color- rounded-full" alt="Ayush portfolio" />
                     <span
                         class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-white">Ayush</span>
 
@@ -62,7 +64,7 @@
                                 class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 "
                                 aria-expanded="false" data-dropdown-toggle="dropdown-user">
 
-                                <img class="w-12 h-12 rounded-full" src="images/AYUSH.jpg" alt="user photo">
+                                <img class="w-12 h-12 rounded-full" src="images/AYUSH.jpg" alt="Ayush the_xiting_way">
                             </div>
                         </div>
                         <div class="z-40 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
@@ -74,6 +76,9 @@
         </div>
     </nav>
 
+    <!-- end of top navbar -->
+
+    <!-- side navbar -->
 
     <aside id="logo-sidebar"
         class="fixed after:block top-0 left-0 z-40 h-full w-64 h-screen pt-20 transition-transform -translate-x-full  sm:translate-x-0 dark:bg-zinc-800 dark:border-yellow-700 border-2"
@@ -201,30 +206,34 @@
         </div>
     </aside>
 
+    <!--end of side navbar -->
+
 
     <div class="pt-0 sm:ml-64">
 
+        <!-- image section -->
         <div
             class="flex rounded-lg w-full  mt-14 bg-[url('/images/background.jpg')] bg-no-repeat bg-center bg-cover border-b-2 border-yellow-300">
             <div
                 class="container  flex justify-center md:rounded-ld overflow-visible md:px-10 py-5 bg-blur backdrop-filter backdrop-blur-md w-full gap-2 md:gap-10">
                 <div>
                     <div type="button"
-                        class="flex text-sm bg-gray-800 bg-transparent rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                        class="flex text-sm bg-gray-800 bg-transparent rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 py-4"
                         aria-expanded="false" data-dropdown-toggle="dropdown-user">
                         <input type="checkbox" id="zoomCheck">
                         <label for="zoomCheck">
 
                             <img class=" rounded-full bg-transparent cursor-cell border-2 border-yellow-300 z-50"
                                 loading="lazy" decoding="async" width="128" height="120" style="color:transparent"
-                                src="images/AYUSH.jpg" alt="user photo">
+                                src="images/AYUSH.jpg" alt="Ayush-portfolio">
                         </label>
                     </div>
                 </div>
                 <div class="flex md:flex-1 flex-col justify-center gap-4 ">
                     <div class="flex justify-between items-center gap-5 ">
                         <div class="text-3xl flex flex-col cursor-default  text-white font-bold text-highlight">Ayush
-                            <div class="text-sm font-semibold flex text-white justify-between items-center">@ayu.shkumar0911
+                            <div class="text-sm font-semibold flex text-white justify-between items-center">
+                                @ayu.shkumar0911
                                 <a class="block md:hidden" target="_blank"
                                     href="https://www.instagram.com/ayu.shkumar0911/"><button
                                         class="h-max w-max flex gap-2 justify-center items-center rounded-md outline-0 active:scale-95 active:shadow-inner disabled:opacity-50 disabled:pointer-events-none disbaled:cursor-not-allowed bg-cardPrimary text-primary font-semibold text-xs p-2"><svg
@@ -253,12 +262,15 @@
             </div>
         </div>
 
+        <!-- end of image section -->
+
+        <!-- about section -->
+
         <section id="About" class=" p-4 text-white body-font">
             <h1 class="md:ml-10 font-bold text-3xl text-yellow-300 ">About</h1>
             <div class="container px-5 py-10 mx-auto">
                 <div class="flex flex-wrap -m-4">
-                    <div class="p-4 md:w-2/3  rounded-xl" data-aos="fade-up-down"
-                        data-aos-duration="2000">
+                    <div class="p-4 md:w-2/3  rounded-xl" data-aos="fade-up-down" data-aos-duration="2000">
                         <div class="md:w-3/2 ">
                             <h2 class="flex justify-center -pb-10 text-xl">
                                 Hey!
@@ -295,12 +307,11 @@
                         <div class="h-full border-2 border-yellow-300 border-opacity-60 rounded-lg overflow-hidden">
                             <a href="https://www.thexitingway.com/" target="_blank"><img
                                     class="lg:h-48 md:h-36 w-[66vw] sm:w-full object-cover object-center"
-                                    src="images/txw.jpg" alt="txw"></a>
+                                    src="images/txw.jpg" alt="thexitingway txw portfolio"></a>
 
                             <div class="p-6">
                                 <h2 class="tracking-widest text-xs title-font font-bold text-red-500 mb-1">Experience
                                 </h2>
-                                <!-- <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1> -->
                                 <p class="leading-relaxed mb-3">From - january-2023
                                     <br>
                                     To - present
@@ -312,65 +323,76 @@
             </div>
         </section>
 
+        <!--end of about section -->
 
-
+        <!-- project section -->
 
         <section id="Projects" class="text-gray-600 body-font ">
             <div class="container px-5 py-20 mx-auto">
                 <h1 class="md:ml-10 font-bold text-yellow-300 -mt-20 md:mt-0 mb-10 text-2xl">Projects</h1>
                 <div class="flex justify-center flex-wrap -m-4">
-                    <div class="xl:w-1/4 md:w-1/2 p-4 " data-aos="flip-left" data-aos-duration="2000">
+                    <div class="xl:w-1/4 md:w-1/2 p-4 "  data-aos="zoom-in"  data-aos-duration="2000">
                         <a href="https://github.com/Ayushkumar890/TXW-Space.github.io" target="_blank">
-                            <div class="sm:bg-yellow-200 z-40 pb-4 rounded-xl border-2 border-yellow-300 hover:bg-gradient-to-t from-yellow-500 to-yellow-100">
+                            <div
+                                class="sm:bg-yellow-200 z-40 pb-4 rounded-xl border-2 border-yellow-300 hover:bg-gradient-to-t from-yellow-500 to-yellow-100">
                                 <img class="h-40 z-20 rounded-t-lg w-full object-cover object-center mb-6 "
-                                    src="images/txw-space.png" alt="content">
-                                <h2 class="text-lg ml-4 text-white sm:text-black font-medium title-font mb-2">TXW-Space</h2>
-                                <p class="leading-relaxed text-white sm:text-black text-x ml-4">using HTML and CSS. &nbsp;&nbsp;</p>
-
-                            </div>
-                        </a>
-                    </div>
-                    <div class="xl:w-1/4 md:w-1/2 p-4" data-aos="flip-left" data-aos-duration="2000">
-                        <a href="https://github.com/Ayushkumar890/login-authentication" target="_blank">
-                            <div class="sm:bg-yellow-200  pb-4 rounded-xl border-2 border-yellow-300 hover:bg-gradient-to-t from-yellow-500 to-yellow-100">
-                                <img class="h-40 rounded-t-lg w-full object-cover object-center mb-6"
-                                    src="images/login-authentication.png" alt="content">
-                                <h2 class="text-lg ml-4 text-white sm:text-black font-medium title-font mb-2">Login Authentication
+                                    src="images/txw-space.png" alt="txw-space">
+                                <h2 class="text-lg ml-4 text-white sm:text-black font-medium title-font mb-2">TXW-Space
                                 </h2>
-                                <p class="leading-relaxed text-white sm:text-black text-x ml-4">Using HTML , CSS and Javascript.</p>
+                                <p class="leading-relaxed text-white sm:text-black text-x ml-4">using HTML and CSS.
+                                    &nbsp;&nbsp;</p>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="xl:w-1/4 md:w-1/2 p-4"  data-aos="zoom-in"  data-aos-duration="2000">
+                        <a href="https://github.com/Ayushkumar890/login-authentication" target="_blank">
+                            <div
+                                class="sm:bg-yellow-200  pb-4 rounded-xl border-2 border-yellow-300 hover:bg-gradient-to-t from-yellow-500 to-yellow-100">
+                                <img class="h-40 rounded-t-lg w-full object-cover object-center mb-6"
+                                    src="images/login-authentication.png" alt="login-authentication">
+                                <h2 class="text-lg ml-4 text-white sm:text-black font-medium title-font mb-2">Login
+                                    Authentication
+                                </h2>
+                                <p class="leading-relaxed text-white sm:text-black text-x ml-4">Using HTML , CSS and
+                                    Javascript.</p>
                             </div>
                         </a>
 
                     </div>
-                    <div class="xl:w-1/4 md:w-1/2 p-4" data-aos="flip-left" data-aos-duration="2000">
+                    <div class="xl:w-1/4 md:w-1/2 p-4"  data-aos="zoom-in"  data-aos-duration="2000">
                         <a href="https://github.com/Ayushkumar890/Ayushkumar.github.io" target="_blank">
-                            <div class="sm:bg-yellow-200  pb-4 rounded-xl border-2 border-yellow-300 hover:bg-gradient-to-t from-yellow-500 to-yellow-100">
+                            <div
+                                class="sm:bg-yellow-200  pb-4 rounded-xl border-2 border-yellow-300 hover:bg-gradient-to-t from-yellow-500 to-yellow-100">
                                 <img class="h-40 rounded-t-lg w-full object-cover object-center mb-6"
-                                    src="images/old-portfolio.png" alt="content">
-                                <h2 class="text-lg ml-4 text-white sm:text-black font-medium title-font mb-2">My Old Portfolio</h2>
-                                <p class="leading-relaxed text-white sm:text-black text-x ml-4">HTML, CSS, Javascript and Bootstrap.
+                                    src="images/old-portfolio.png" alt="portfolio">
+                                <h2 class="text-lg ml-4 text-white sm:text-black font-medium title-font mb-2">My Old
+                                    Portfolio</h2>
+                                <p class="leading-relaxed text-white sm:text-black text-x ml-4">HTML, CSS, Javascript
+                                    and Bootstrap.
                                 </p>
                             </div>
                         </a>
 
                     </div>
-                    <div class="xl:w-1/4 md:w-1/2 p-4" data-aos="flip-left" data-aos-duration="2000">
+                    <div class="xl:w-1/4 md:w-1/2 p-4" data-aos="zoom-in" data-aos-duration="2000">
                         <a href="https://github.com/Ayushkumar890/Dice-game-by-ayush" target="_blank">
-                            <div class="sm:bg-yellow-200 pb-4 rounded-xl border-2 border-yellow-300 hover:bg-gradient-to-t from-yellow-500 to-yellow-100">
+                            <div
+                                class="sm:bg-yellow-200 pb-4 rounded-xl border-2 border-yellow-300 hover:bg-gradient-to-t from-yellow-500 to-yellow-100">
                                 <img class="h-40 rounded-t-lg w-full object-cover object-center mb-6"
-                                    src="images/dice-game.png" alt="content">
-                                <h2 class="text-lg ml-4 text-white sm:text-black  font-medium title-font mb-2">Dice Game</h2>
-                                <p class="leading-relaxed text-white sm:text-black text-x ml-4">HTML, CSS, Express and Bootstrap.</p>
+                                    src="images/dice-game.png" alt="dice-game">
+                                <h2 class="text-lg ml-4 text-white sm:text-black  font-medium title-font mb-2">Dice Game
+                                </h2>
+                                <p class="leading-relaxed text-white sm:text-black text-x ml-4">HTML, CSS, Express and
+                                    Bootstrap.</p>
                             </div>
                         </a>
-
                     </div>
                 </div>
             </div>
         </section>
+        <!-- end of project section -->
     </div>
-
-
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
