@@ -1,5 +1,7 @@
 const express = require("express");
+const nodemailer = require("nodemailer");
 const mongoose = require("mongoose");
+// const { transporter } = require("./public/javascript/mailsending");
 const port = "http://localhost:3000/";
 const app = express();
 app.use(express.json());
@@ -41,7 +43,43 @@ app.get("/contact", (req, res) => {
   res.sendFile(__dirname + "/public/html/contact.html");
 });
 
-app.post("/contact", async (req, res) => {
+// app.post("/contact", async (req, res) => {
+//   const username = req.body.name;
+//   const message = req.body.message;
+//   const subject = req.body.subject;
+//   const email = req.body.email;
+//   await User.create({
+//     username,
+//     message,
+//     subject,
+//     email,
+//   });
+//   // app.use('/mailsending', transporter);
+//   // res.send(transporter);
+//   // res.send("your form is submitted");
+//   res.sendFile(__dirname + "/public/html/contact.html");
+// });
+
+app.post("/contact", async(req, res) => {
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "ayushkumar2004.hp@gmail.com",
+      pass: "bupc tnoz hiic ercv",
+    },
+  });
+
+  const mailOptions = {
+    from: "ayushkumar2004.hp@gmail.com",
+    to: req.body.email,
+    subject: req.body.subject,
+    text: req.body.message,
+  };
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    }
+  });
   const username = req.body.name;
   const message = req.body.message;
   const subject = req.body.subject;
@@ -52,7 +90,8 @@ app.post("/contact", async (req, res) => {
     subject,
     email,
   });
-  res.send("your form is submitted");
+
+  res.sendFile(__dirname + "/public/html/contact.html");
 });
 
 app.listen(process.env.PORT || 3000, () => {
