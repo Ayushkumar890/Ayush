@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush-Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/public/style.css">
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/style.css">
     <link rel="icon" type="image/x-icon" href="/images/aaa.png">
 
-    <title>Ayush-Portfolio</title>
+
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" /> -->
 </head>
 <style>
     input[type=checkbox] {
@@ -19,12 +22,10 @@
     .container img {
 
         transition: transform 0.85s ease;
-
     }
 
     input[type=checkbox]:checked~label>img {
         transform: scale(2);
-
     }
 
     html {
@@ -34,7 +35,10 @@
 
 <body class="bg-zinc-900 w-full">
 
-    <nav class="fixed z-40 w-full -mt-14 p-0 bg-zinc-900 border-b-2 border-yellow-300">
+
+    <!-- top navbar -->
+
+    <nav class="fixed z-50 w-full -mt-14 p-0 bg-zinc-900 ">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
             <div class="flex items-center justify-between">
                 <div class="flex items-center justify-start">
@@ -48,7 +52,7 @@
                                 d="M1 1h15M1 7h15M1 13h15" />
                         </svg>
                     </button>
-                    <img src="images/A_logo.png" class="h-8 w-10 mr-3 color- rounded-full" alt="FlowBite Logo" />
+                    <img src="images/A_logo.png" class="h-8 w-10 mr-3 color- rounded-full" alt="Ayush portfolio" />
                     <span
                         class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap text-white">Ayush</span>
 
@@ -57,10 +61,10 @@
                     <div class="flex items-center ml-3">
                         <div>
                             <div type="button"
-                                class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 "
+                                class="flex text-sm animate-bounce bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 "
                                 aria-expanded="false" data-dropdown-toggle="dropdown-user">
 
-                                <img class="w-12 h-12 rounded-full" src="images/AYUSH.jpg" alt="user photo">
+                                <img class="w-12 h-12 rounded-full" src="images/AYUSH.jpg" alt="Ayush the_xiting_way">
                             </div>
                         </div>
                         <div class="z-40 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
@@ -72,9 +76,12 @@
         </div>
     </nav>
 
+    <!-- end of top navbar -->
+
+    <!-- side navbar -->
 
     <aside id="logo-sidebar"
-        class="fixed after:block top-0 left-0 z-30 h-full w-64 h-screen pt-20 transition-transform -translate-x-full  sm:translate-x-0 dark:bg-zinc-800 dark:border-yellow-700 border-2"
+        class="fixed after:block top-0 left-0 z-40 h-full w-60 h-screen pt-20 transition-transform -translate-x-full  sm:translate-x-0 dark:bg-zinc-800 dark:border-yellow-700 border-2"
         aria-label="Sidebar">
         <div class="h-full px-3 pb-4 overflow-y-auto  bg-zinc-900 dark:bg-zinc-800 ">
             <ul class="space-y-4  font-medium">
@@ -91,7 +98,7 @@
                 </li>
 
                 <li>
-                    <a href="#About"
+                    <a href="/"
                         class="flex items-center px-10  p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -102,8 +109,8 @@
 
                     </a>
                 </li>
-                <li>
-                    <a href="#Projects"
+                <!-- <li>
+                    <a href="/project"
                         class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -114,7 +121,7 @@
 
                         <span class="flex-1 ml-3 whitespace-nowrap">Projects</span>
                     </a>
-                </li>
+                </li> -->
                 <li>
                     <a href="#"
                         class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
@@ -144,7 +151,7 @@
 
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/ayu.shkumar0911/"
+                    <a href="https://www.instagram.com/ayushkumar_0911/"
                         class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="h-5 w-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -199,33 +206,34 @@
         </div>
     </aside>
 
+    <!--end of side navbar -->
 
-    <!--  -->
 
+    <div class="pt-0 sm:ml-60">
 
-    <div class="pt-0 sm:ml-64">
-
+        <!-- image section -->
         <div
-            class="flex rounded-lg w-full z-40 mt-14 bg-[url('/images/background.jpg')] bg-no-repeat bg-center bg-cover border-b-2 border-yellow-300">
+            class="flex rounded-lg w-full  mt-14 bg-[url('/images/background.jpg')] bg-no-repeat bg-center bg-cover ">
             <div
                 class="container  flex justify-center md:rounded-ld overflow-visible md:px-10 py-5 bg-blur backdrop-filter backdrop-blur-md w-full gap-2 md:gap-10">
                 <div>
                     <div type="button"
-                        class="flex text-sm bg-gray-800 bg-transparent rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 py-4"
+                        class=" flex text-sm bg-gray-800 bg-transparent rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 py-4"
                         aria-expanded="false" data-dropdown-toggle="dropdown-user">
                         <input type="checkbox" id="zoomCheck">
                         <label for="zoomCheck">
 
-                            <img class=" rounded-full bg-transparent cursor-cell border-2 border-yellow-300 z-50"
+                            <img class=" rounded-full bg-transparent cursor-cell  z-50"
                                 loading="lazy" decoding="async" width="128" height="120" style="color:transparent"
-                                src="images/AYUSH.jpg" alt="user photo">
+                                src="images/AYUSH.jpg" alt="Ayush-portfolio">
                         </label>
                     </div>
                 </div>
                 <div class="flex md:flex-1 flex-col justify-center gap-4 ">
                     <div class="flex justify-between items-center gap-5 ">
                         <div class="text-3xl flex flex-col cursor-default  text-white font-bold text-highlight">Ayush
-                            <div class="text-sm font-semibold flex text-white justify-between items-center">@ayu.shkumar0911
+                            <div class="text-sm font-semibold flex text-white justify-between items-center">
+                                @ayushkumar_0911
                                 <a class="block md:hidden" target="_blank"
                                     href="https://www.instagram.com/ayu.shkumar0911/"><button
                                         class="h-max w-max flex gap-2 justify-center items-center rounded-md outline-0 active:scale-95 active:shadow-inner disabled:opacity-50 disabled:pointer-events-none disbaled:cursor-not-allowed bg-cardPrimary text-primary font-semibold text-xs p-2"><svg
@@ -239,8 +247,8 @@
                                         </svg></button></a>
                             </div>
                         </div>
-                        <a class="hidden md:block md:bg-green-900   rounded-xl text-white border-2 border-yellow-300"
-                            target="_blank" href="https://www.instagram.com/ayu.shkumar0911/"><button
+                        <a class="hidden md:block md:bg-green-900   rounded-xl text-white "
+                            target="_blank" href="https://www.instagram.com/ayushkumar_0911/"><button
                                 class="h-max w-max flex gap-4 justify-center items-center rounded-md outline-0 active:scale-95 active:shadow-inner disabled:opacity-50 disabled:pointer-events-none disbaled:cursor-not-allowed bg-cardPrimary text-primary font-semibold text-xs py-2 px-4"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -254,94 +262,89 @@
             </div>
         </div>
 
+        <!-- end of image section -->
+        <!-- project section -->
 
+        <section id="Projects" class="text-gray-600 body-font ">
+            <div class="container px-5 py-20 mx-auto">
+                <h1 class="md:ml-10 font-bold text-yellow-300 -mt-20 md:mt-0 mb-10 text-2xl">Projects</h1>
+                <div class="flex justify-center flex-wrap -m-4">
+                    <div class="xl:w-1/4 md:w-1/2 p-4"  data-aos="zoom-in"  data-aos-duration="2000">
+                        <a href="https://github.com/Ayushkumar890/TXW-Space.github.io" target="_blank">
+                            <div
+                                class="sm:bg-yellow-200 z-40 pb-4 rounded-xl  hover:bg-gradient-to-t from-yellow-500 to-yellow-100">
+                                <img class="h-40 z-20 rounded-t-lg w-full object-cover object-center mb-6 "
+                                    src="images/txw-space.png" alt="txw-space">
+                                <h2 class="text-lg ml-4 text-white sm:text-black font-medium title-font mb-2">TXW-Space
+                                </h2>
+                                <p class="leading-relaxed text-white sm:text-black text-x ml-4">using HTML and CSS.
+                                    &nbsp;&nbsp;</p>
 
-
-
-        <div class="my-2">
-            <div class="max-w-6xl mx-auto bg-gray-900 sm:bg-yellow-100 rounded-lg border-4 border-yellow-500">
-                <div class="grid md:grid-cols-2 items-center sm:gap-16 sm:px-10 p-6 sm:p-2 font-[sans-serif]">
-                    <div>
-                        <h1 class="text-4xl font-extrabold text-white sm:text-black">Get in Touch</h1>
-                        <p class="text-sm text-white sm:text-black mt-3">Have some brand to develop and need
-                            help? Then reach out we'd love to hear about your project and provide help.</p>
-                        <ul class="mt-12 space-y-8">
-                            <li class="flex items-center text-white sm:text-black">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"
-                                    viewBox="0 0 479.058 479.058">
-                                    <path
-                                        d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"
-                                        data-original="#000000" />
-                                </svg>
-                                <a href="javascript:void(0)" class="text-white sm:text-black text-sm ml-3">
-                                    <strong>ayushkumar2004.hp@gmail.com</strong>
-                                </a>
-                            </li>
-
-                            <li class="flex items-center text-white sm:text-black">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px"
-                                    viewBox="0 0 368.16 368.16">
-                                    <path
-                                        d="M184.08 0c-74.992 0-136 61.008-136 136 0 24.688 11.072 51.24 11.536 52.36 3.576 8.488 10.632 21.672 15.72 29.4l93.248 141.288c3.816 5.792 9.464 9.112 15.496 9.112s11.68-3.32 15.496-9.104l93.256-141.296c5.096-7.728 12.144-20.912 15.72-29.4.464-1.112 11.528-27.664 11.528-52.36 0-74.992-61.008-136-136-136zM293.8 182.152c-3.192 7.608-9.76 19.872-14.328 26.8l-93.256 141.296c-1.84 2.792-2.424 2.792-4.264 0L88.696 208.952c-4.568-6.928-11.136-19.2-14.328-26.808-.136-.328-10.288-24.768-10.288-46.144 0-66.168 53.832-120 120-120s120 53.832 120 120c0 21.408-10.176 45.912-10.28 46.152z"
-                                        data-original="#000000"></path>
-                                    <path
-                                        d="M184.08 64.008c-39.704 0-72 32.304-72 72s32.296 72 72 72 72-32.304 72-72-32.296-72-72-72zm0 128c-30.872 0-56-25.12-56-56s25.128-56 56-56 56 25.12 56 56-25.128 56-56 56z"
-                                        data-original="#000000"></path>
-                                </svg>
-                                <a href="javascript:void(0)" class="text-white sm:text-black text-sm ml-3">
-                                    <strong>Mohar nagar, Dera bassi.</strong>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="flex mt-12 space-x-4">
-
-                            <li
-                                class="bg-yellow-600 hover:bg-yellow-900 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                                <a href="javascript:void(0)">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill='#000000'
-                                        viewBox="0 0 511 512">
-                                        <path
-                                            d="M111.898 160.664H15.5c-8.285 0-15 6.719-15 15V497c0 8.285 6.715 15 15 15h96.398c8.286 0 15-6.715 15-15V175.664c0-8.281-6.714-15-15-15zM96.898 482H30.5V190.664h66.398zM63.703 0C28.852 0 .5 28.352.5 63.195c0 34.852 28.352 63.2 63.203 63.2 34.848 0 63.195-28.352 63.195-63.2C126.898 28.352 98.551 0 63.703 0zm0 96.395c-18.308 0-33.203-14.891-33.203-33.2C30.5 44.891 45.395 30 63.703 30c18.305 0 33.195 14.89 33.195 33.195 0 18.309-14.89 33.2-33.195 33.2zm289.207 62.148c-22.8 0-45.273 5.496-65.398 15.777-.684-7.652-7.11-13.656-14.942-13.656h-96.406c-8.281 0-15 6.719-15 15V497c0 8.285 6.719 15 15 15h96.406c8.285 0 15-6.715 15-15V320.266c0-22.735 18.5-41.23 41.235-41.23 22.734 0 41.226 18.495 41.226 41.23V497c0 8.285 6.719 15 15 15h96.403c8.285 0 15-6.715 15-15V302.066c0-79.14-64.383-143.523-143.524-143.523zM466.434 482h-66.399V320.266c0-39.278-31.953-71.23-71.226-71.23-39.282 0-71.239 31.952-71.239 71.23V482h-66.402V190.664h66.402v11.082c0 5.77 3.309 11.027 8.512 13.524a15.01 15.01 0 0 0 15.875-1.82c20.313-16.294 44.852-24.907 70.953-24.907 62.598 0 113.524 50.926 113.524 113.523zm0 0"
-                                            data-original="#000000" />
-                                    </svg>
-                                </a>
-                            </li>
-                            <li
-                                class="bg-yellow-600 hover:bg-yellow-900 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                                <a href="javascript:void(0)">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="18px" height="18px" fill='#000000'
-                                        viewBox="0 0 24 24">
-                                        <path
-                                            d="M12 9.3a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4Zm0-1.8a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm5.85-.225a1.125 1.125 0 1 1-2.25 0 1.125 1.125 0 0 1 2.25 0ZM12 4.8c-2.227 0-2.59.006-3.626.052-.706.034-1.18.128-1.618.299a2.59 2.59 0 0 0-.972.633 2.601 2.601 0 0 0-.634.972c-.17.44-.265.913-.298 1.618C4.805 9.367 4.8 9.714 4.8 12c0 2.227.006 2.59.052 3.626.034.705.128 1.18.298 1.617.153.392.333.674.632.972.303.303.585.484.972.633.445.172.918.267 1.62.3.993.047 1.34.052 3.626.052 2.227 0 2.59-.006 3.626-.052.704-.034 1.178-.128 1.617-.298.39-.152.674-.333.972-.632.304-.303.485-.585.634-.972.171-.444.266-.918.299-1.62.047-.993.052-1.34.052-3.626 0-2.227-.006-2.59-.052-3.626-.034-.704-.128-1.18-.299-1.618a2.619 2.619 0 0 0-.633-.972 2.595 2.595 0 0 0-.972-.634c-.44-.17-.914-.265-1.618-.298-.993-.047-1.34-.052-3.626-.052ZM12 3c2.445 0 2.75.009 3.71.054.958.045 1.61.195 2.185.419A4.388 4.388 0 0 1 19.49 4.51c.457.45.812.994 1.038 1.595.222.573.373 1.227.418 2.185.042.96.054 1.265.054 3.71 0 2.445-.009 2.75-.054 3.71-.045.958-.196 1.61-.419 2.185a4.395 4.395 0 0 1-1.037 1.595 4.44 4.44 0 0 1-1.595 1.038c-.573.222-1.227.373-2.185.418-.96.042-1.265.054-3.71.054-2.445 0-2.75-.009-3.71-.054-.958-.045-1.61-.196-2.185-.419A4.402 4.402 0 0 1 4.51 19.49a4.414 4.414 0 0 1-1.037-1.595c-.224-.573-.374-1.227-.419-2.185C3.012 14.75 3 14.445 3 12c0-2.445.009-2.75.054-3.71s.195-1.61.419-2.185A4.392 4.392 0 0 1 4.51 4.51c.45-.458.994-.812 1.595-1.037.574-.224 1.226-.374 2.185-.419C9.25 3.012 9.555 3 12 3Z">
-                                        </path>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
+                            </div>
+                        </a>
                     </div>
-                    <div class="bg-transparent p-6 rounded-lg">
-                        <form class="mt-8 space-y-4" method="post" action="/contact">
-                            <input type='text' name="name" placeholder='Name'
-                                class="w-full rounded-md py-3 px-4 text-sm outline-red-600  border-2 border-yellow-500" />
-                            <input type='email' name="email" placeholder='Email'
-                                class="w-full rounded-md py-3 px-4 text-sm outline-red-600  border-2 border-yellow-500" />
-                            <input type='text' name="subject" placeholder='Subject'
-                                class="w-full rounded-md py-3 px-4 text-sm outline-red-600 border-2 border-yellow-500" />
-                            <textarea placeholder='Message' name="message" rows="6"
-                                class="w-full rounded-md px-4 text-sm pt-3 outline-red-600 border-2 border-yellow-500"></textarea>
-                            <input type='submit'
-                                class="text-white bg-yellow-600 hover:bg-yellow-700 font-semibold rounded-md text-sm px-4 py-3 flex items-center justify-center w-full" />
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill='#fff' class="mr-2" viewBox="0 0 548.244 548.244">
-                                <path fill-rule="evenodd" d="M392.19 156.054 211.268 281.667 22.032 218.58C8.823 214.168-.076 201.775 0 187.852c.077-13.923 9.078-26.24 22.338-30.498L506.15 1.549c11.5-3.697 24.123-.663 32.666 7.88 8.542 8.543 11.577 21.165 7.879 32.666L390.89 525.906c-4.258 13.26-16.575 22.261-30.498 22.338-13.923.076-26.316-8.823-30.728-22.032l-63.393-190.153z" clip-rule="evenodd" data-original="#000000" />
-                            </svg> -->
-                            <!-- Send Message -->
-                        </form>
+                    <div class="xl:w-1/4 md:w-1/2 p-4"  data-aos="zoom-in"  data-aos-duration="2000">
+                        <a href="https://github.com/Ayushkumar890/login-authentication" target="_blank">
+                            <div
+                                class="sm:bg-yellow-200  pb-4 rounded-xl  hover:bg-gradient-to-t from-yellow-500 to-yellow-100">
+                                <img class="h-40 rounded-t-lg w-full object-cover object-center mb-6"
+                                    src="images/login-authentication.png" alt="login-authentication">
+                                <h2 class="text-lg ml-4 text-white sm:text-black font-medium title-font mb-2">Login
+                                    Authentication
+                                </h2>
+                                <p class="leading-relaxed text-white sm:text-black text-x ml-4">Using HTML , CSS and
+                                    Javascript.</p>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="xl:w-1/4 md:w-1/2 p-4"  data-aos="zoom-in"  data-aos-duration="2000">
+                        <a href="https://github.com/Ayushkumar890/Ayushkumar.github.io" target="_blank">
+                            <div
+                                class="sm:bg-yellow-200  pb-4 rounded-xl  hover:bg-gradient-to-t from-yellow-500 to-yellow-100">
+                                <img class="h-40 rounded-t-lg w-full object-cover object-center mb-6"
+                                    src="images/old-portfolio.png" alt="portfolio">
+                                <h2 class="text-lg ml-4 text-white sm:text-black font-medium title-font mb-2">My Old
+                                    Portfolio</h2>
+                                <p class="leading-relaxed text-white sm:text-black text-x ml-4">HTML, CSS, Javascript
+                                    and Bootstrap.
+                                </p>
+                            </div>
+                        </a>
+
+                    </div>
+                    <div class="xl:w-1/4 md:w-1/2 p-4" data-aos="zoom-in" data-aos-duration="2000">
+                        <a href="https://github.com/Ayushkumar890/Dice-game-by-ayush" target="_blank">
+                            <div
+                                class="sm:bg-yellow-200 pb-4 rounded-xl  hover:bg-gradient-to-t from-yellow-500 to-yellow-100">
+                                <img class="h-40 rounded-t-lg w-full object-cover object-center mb-6"
+                                    src="images/dice-game.png" alt="dice-game">
+                                <h2 class="text-lg ml-4 text-white sm:text-black  font-medium title-font mb-2">Dice Game
+                                </h2>
+                                <p class="leading-relaxed text-white sm:text-black text-x ml-4">HTML, CSS, Express and
+                                    Bootstrap.</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
-</body>
+        </section>
+        <!-- end of project section -->
 
+
+
+
+    </div>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+
+
+</body>
 
 </html>

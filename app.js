@@ -9,6 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static("public"));
 // app.set('views', __dirname+'/views/');
+app.set("view engine", "ejs");
 
 mongoose
   .connect("mongodb://localhost:27017", { dbName: "Portfolio" })
@@ -36,29 +37,17 @@ const UserSchema = new mongoose.Schema({
 const User = mongoose.model("user", UserSchema);
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/html/index.html");
+  res.render("index");
 });
 
 app.get("/contact", (req, res) => {
-  res.sendFile(__dirname + "/public/html/contact.html");
+  res.render("contact");
+});
+app.get("/project", (req, res) => {
+  res.render("project")
 });
 
-// app.post("/contact", async (req, res) => {
-//   const username = req.body.name;
-//   const message = req.body.message;
-//   const subject = req.body.subject;
-//   const email = req.body.email;
-//   await User.create({
-//     username,
-//     message,
-//     subject,
-//     email,
-//   });
-//   // app.use('/mailsending', transporter);
-//   // res.send(transporter);
-//   // res.send("your form is submitted");
-//   res.sendFile(__dirname + "/public/html/contact.html");
-// });
+
 
 app.post("/contact", async(req, res) => {
   const transporter = nodemailer.createTransport({
@@ -90,7 +79,7 @@ app.post("/contact", async(req, res) => {
     subject,
     email,
   });
-
+  console.log("Form submitted successfully");
   res.sendFile(__dirname + "/public/html/contact.html");
 });
 
