@@ -1,16 +1,19 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const mongoose = require("mongoose");
-// const { transporter } = require("./public/javascript/mailsending");
+
 const port = "http://localhost:3000/";
+
 const app = express();
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static("public"));
-// app.set('views', __dirname+'/views/');
+
 app.set("view engine", "ejs");
 
+//connected database
 mongoose
   .connect("mongodb://localhost:27017", { dbName: "Portfolio" })
   .then(() => {
@@ -36,6 +39,7 @@ const UserSchema = new mongoose.Schema({
 
 const User = mongoose.model("user", UserSchema);
 
+
 app.get("/", (req, res) => {
   res.render("index");
 });
@@ -48,7 +52,7 @@ app.get("/project", (req, res) => {
 });
 
 
-
+// sending mail
 app.post("/contact", async(req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -83,6 +87,8 @@ app.post("/contact", async(req, res) => {
   res.sendFile(__dirname + "/public/html/contact.html");
 });
 
+
+//server listen
 app.listen(process.env.PORT || 3000, () => {
   console.log(`Server ready at ${port}`);
 });
