@@ -44,13 +44,6 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/contact", (req, res) => {
-  res.render("contact");
-});
-app.get("/project", (req, res) => {
-  res.render("project")
-});
-
 
 // sending mail
 app.post("/contact", async(req, res) => {
@@ -84,7 +77,7 @@ app.post("/contact", async(req, res) => {
     email,
   });
   console.log("Form submitted successfully");
-  res.sendFile(__dirname + "/public/html/contact.html");
+  res.render("index");
 });
 
 
