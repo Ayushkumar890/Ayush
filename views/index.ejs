@@ -20,10 +20,9 @@
 
 <body class="bg-zinc-900 w-full">
 
-
     <!-- top navbar -->
 
-    <nav class="fixed z-50 w-full -mt-14 p-0 bg-zinc-900 ">
+    <nav class=" z-50 w-full  p-0 bg-zinc-800 ">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
             <div class="flex items-center justify-between">
                 <div class="flex items-center justify-start">
@@ -46,7 +45,7 @@
                     <div class="flex items-center ml-3">
                         <div>
                             <div type="button"
-                                class="flex text-sm animate-bounce bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 "
+                                class="flex text-sm rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 "
                                 aria-expanded="false" data-dropdown-toggle="dropdown-user">
 
                                 <img class="w-12 h-12 rounded-full" src="images/AYUSH.jpg" alt="Ayush the_xiting_way">
@@ -66,12 +65,28 @@
     <!-- side navbar -->
 
     <aside id="logo-sidebar"
-        class="fixed after:block top-0 left-0 z-40 h-full w-60 h-screen pt-20 transition-transform -translate-x-full  sm:translate-x-0 dark:bg-zinc-800 dark:border-yellow-700 border-2"
+        class="fixed after:block top-0 left-0 z-40 w-60 h-screen pt-2 transition-transform -translate-x-full  sm:translate-x-0 dark:bg-zinc-800"
         aria-label="Sidebar">
+        <div>
+            <div type="button"
+                class=" flex text-sm bg-transparent rounded-full focus:ring-4 focus:ring-gray-300 px-12 mb-6"
+                aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                <input type="checkbox" id="zoomCheck">
+                <label for="zoomCheck">
+
+                    <img class=" rounded-full bg-transparent cursor-cell  z-50" loading="lazy" decoding="async"
+                        width="128" height="120" style="color:transparent" src="images/AYUSH.jpg"
+                        alt="Ayush-portfolio, Trolltunga,Norway">
+                        <div id="myModal" class="modal">
+                            <img class="modal-content" id="img01">
+                        </div>
+                </label>
+            </div>
+        </div>
         <div class="h-full px-3 pb-4 overflow-y-auto  bg-zinc-900 dark:bg-zinc-800 ">
             <ul class="space-y-4  font-medium">
                 <li>
-                    <a href="/"
+                    <a href=""
                         class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group ">
                         <svg class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -82,8 +97,8 @@
                     </a>
                 </li>
 
-                <!-- <li>
-                    <a href="/"
+                <li>
+                    <a href="#About"
                         class="flex items-center px-10  p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -93,9 +108,9 @@
                         <span class="flex-1 ml-3 whitespace-nowrap">About</span>
 
                     </a>
-                </li> -->
+                </li>
                 <li>
-                    <a href="/project"
+                    <a href="#project"
                         class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -119,7 +134,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/contact"
+                    <a href="#contact"
                         class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -177,15 +192,7 @@
 
                         <span class="flex-1 ml-3 whitespace-nowrap">Twitter</span>
                     </a>
-                    <a href="mailto:ayushkumar2004.hp@gmail.com"
-                        class="flex items-center px-10 py-3 px-1 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg class="h-5 w-5  text-yellow-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                            <polyline points="22,6 12,13 2,6" />
-                        </svg>
-                        <span class="flex-1 ml-3 whitespace-nowrap">E-mail</span>
-                    </a>
+                    
                 </li>
             </ul>
         </div>
@@ -193,68 +200,13 @@
 
     <!--end of side navbar -->
 
+    <!-- about section -->
 
-    <div class="pt-0 sm:ml-60">
+    <div class="pt-0 sm:ml-60 ">
 
-        <!-- image section -->
-        <div class="flex rounded-lg w-full  mt-14 bg-[url('/images/background.jpg')] bg-no-repeat bg-center bg-cover ">
-            <div
-                class="container  flex justify-center md:rounded-ld overflow-visible md:px-10 py-5 bg-blur backdrop-filter backdrop-blur-md w-full gap-2 md:gap-10">
-                <div>
-                    <div type="button"
-                        class=" flex text-sm bg-gray-800 bg-transparent rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600 py-4"
-                        aria-expanded="false" data-dropdown-toggle="dropdown-user">
-                        <input type="checkbox" id="zoomCheck">
-                        <label for="zoomCheck">
-
-                            <img class=" rounded-full bg-transparent cursor-cell  z-50" loading="lazy" decoding="async"
-                                width="128" height="120" style="color:transparent" src="images/AYUSH.jpg"
-                                alt="Ayush-portfolio, Trolltunga,Norway">
-                                <div id="myModal" class="modal">
-                                    <img class="modal-content" id="img01">
-                                </div>
-                        </label>
-                    </div>
-                </div>
-                <div class="flex md:flex-1 flex-col justify-center gap-4 ">
-                    <div class="flex justify-between items-center gap-5 ">
-                        <div class="text-3xl flex flex-col cursor-default  text-white font-bold text-highlight">Ayush
-                            <div class="text-sm font-semibold flex text-white justify-between items-center">
-                                @ayushkumar_0911
-                                <a class="block md:hidden" target="_blank"
-                                    href="https://www.instagram.com/ayu.shkumar0911/"><button
-                                        class="h-max w-max flex gap-2 justify-center items-center rounded-md outline-0 active:scale-95 active:shadow-inner disabled:opacity-50 disabled:pointer-events-none disbaled:cursor-not-allowed bg-cardPrimary text-primary font-semibold text-xs p-2"><svg
-                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                            stroke-linecap="round" stroke-linejoin="round"
-                                            class="lucide lucide-instagram text-red-500">
-                                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                            <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                                        </svg></button></a>
-                            </div>
-                        </div>
-                        <a class="hidden md:block md:bg-green-900   rounded-xl text-white " target="_blank"
-                            href="https://www.instagram.com/ayushkumar_0911/"><button
-                                class="h-max w-max flex gap-4 justify-center items-center rounded-md outline-0 active:scale-95 active:shadow-inner disabled:opacity-50 disabled:pointer-events-none disbaled:cursor-not-allowed bg-cardPrimary text-primary font-semibold text-xs py-2 px-4"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="lucide lucide-instagram">
-                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
-                                </svg><span class="hidden md:block ">Follow me on Instagram</span></button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- end of image section -->
-
-        <!-- about section -->
 
         <section id="About" class=" p-4 text-white body-font">
-            <h1 class="md:ml-10 font-bold text-3xl text-yellow-300 ">About</h1>
+            <h1 class="md:ml-10 font-bold text-3xl text-purple-700 ">About</h1>
             <div class="container px-5 py-10 mx-auto">
                 <div class="flex flex-wrap -m-4">
                     <div class="p-4 w-full rounded-xl" data-aos="fade-up-down" data-aos-duration="2000">
@@ -280,9 +232,7 @@
                                 <br>
                                 <br>
 
-                                🤝 I work very well in a team and I also participated in Ceed Invest2.0 in which me and
-                                my
-                                team go to finals and my another skills is playing cricket and badminton.
+                                🤝 I work very well in a team and I also participated in Ceed Innovest2.0 where me along with my team where the finalists.
                                 <br>
                                 <br>
 
@@ -290,62 +240,27 @@
                             </p>
                         </div>
                     </div>
-                    <!-- <div class=" md:w-1/3" data-aos="fade-up-left" data-aos-duration="2000">
-                        <div class="h-full  border-opacity-60 rounded-lg overflow-hidden">
-                            <a href="https://www.thexitingway.com/" target="_blank"><img
-                                    class="lg:h-48 md:h-36 w-[66vw] sm:w-full object-cover object-center"
-                                    src="images/txw.jpg" alt="thexitingway txw portfolio"></a>
-
-                            <div class="p-6">
-                                <h2 class="tracking-widest text-xs title-font font-bold text-red-500 mb-1">Experience
-                                </h2>
-                                <p class="leading-relaxed mb-3">From - january-2023
-                                    <br>
-                                    To - present
-                                </p>
-                            </div>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </section>
 
         <!--end of about section -->
 
-        <!-- skill section -->
-        <!-- <section class="w-full px-4 lg:w-5/12">
-            <div class="mb-8">
-                <h1 class="text-white">html</h1>
-               <div class="dark:bg-dark-3 relative h-4 w-full rounded-2xl">
-                  <div
-                     class="bg-yellow-300 absolute top-0 left-0 flex h-full w-1/2 items-center justify-center rounded-2xl text-xs font-bold text-black"
-                     >
-                     50%
-                  </div>
-               </div>
-            </div>
-            <div class="mb-8">
-               <div class="bg-yellow-300 dark:bg-dark-3 relative h-4 w-full rounded-2xl">
-                  <div
-                     class="bg-primary absolute top-0 left-0 flex h-full w-[75%] items-center justify-center rounded-2xl text-xs font-bold text-black"
-                     >
-                     75%
-                  </div>
-               </div>
-            </div>
-            <div class="mb-8">
-               <div class="bg-stroke dark:bg-dark-3 relative h-4 w-full rounded-2xl">
-                  <div
-                     class="bg-yellow-300 absolute top-0 left-0 flex h-full w-[90%] items-center justify-center rounded-2xl text-xs font-bold text-black"
-                     >
-                     90%
-                  </div>
-               </div>
-            </div>
-        </section> -->
-        <!-- skill section -->
+        <!-- project section -->
+        <div id="project">
+            <%- include("project.ejs") -%>
+        </div>
+
+        
+
+        <div id="contact" class="sm:ml-64">
+            
+            <%- include("contact.ejs") -%>
+        </div>
+
 
     </div>
+
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
