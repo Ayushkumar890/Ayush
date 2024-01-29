@@ -44,41 +44,41 @@ app.get("/", (req, res) => {
 });
 
 
-// // sending mail
+// sending mail
 
-// app.post("/contact", async(req, res) => {
-//   const transporter = nodemailer.createTransport({
-//     service: "gmail",
-//     auth: {
-//       user: "ayushkumar2004.hp@gmail.com",
-//       pass: "bupc tnoz hiic ercv",
-//     },
-//   });
+app.post("/contact", async(req, res) => {
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "ayushkumar2004.hp@gmail.com",
+      pass: "bupc tnoz hiic ercv",
+    },
+  });
 
-//   const mailOptions = {
-//     from: "ayushkumar2004.hp@gmail.com",
-//     to: req.body.email,
-//     subject: req.body.subject,
-//     text: req.body.message,
-//   };
-//   transporter.sendMail(mailOptions, function (error, info) {
-//     if (error) {
-//       console.log(error);
-//     }
-//   });
-//   const username = req.body.name;
-//   const message = req.body.message;
-//   const subject = req.body.subject;
-//   const email = req.body.email;
-//   await User.create({
-//     username,
-//     message,
-//     subject,
-//     email,
-//   });
-//   console.log("Form submitted successfully");
-//   res.render("index");
-// });
+  const mailOptions = {
+    from: "ayushkumar2004.hp@gmail.com",
+    to: req.body.email,
+    subject: req.body.subject,
+    text: req.body.message,
+  };
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log(error);
+    }
+  });
+  const username = req.body.name;
+  const message = req.body.message;
+  const subject = req.body.subject;
+  const email = req.body.email;
+  await User.create({
+    username,
+    message,
+    subject,
+    email,
+  });
+  console.log("Form submitted successfully");
+  res.render("index");
+});
 
 
 //server listen
