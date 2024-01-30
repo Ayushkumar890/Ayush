@@ -14,11 +14,10 @@
     <link rel="stylesheet" href="/css/index.css">
 
 
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" /> -->
-</head>
-<style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
 
-</style>
+</head>
+
 
 <body class="bg-zinc-800 w-full">
 
@@ -51,13 +50,13 @@
                                 aria-expanded="false" data-dropdown-toggle="dropdown-user">
 
                                 <a href="https://github.com/Ayushkumar890"
-                                    class="flex items-center mr-4 p-3 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-black group">
+                                    class="flex items-center mr-4 p-3 text-white rounded-lg dark:text-white hover:bg-black group">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 cursor-pointer " fill="white"
                                         style="color: #000" viewBox="0 0 24 24">
                                         <path
                                             d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                                     </svg>
-                                    <!-- <span class="flex-1 ml-3 whitespace-nowrap">Git-Hub</span> -->
+                                
                                 </a>
                             </div>
                         </div>
@@ -75,13 +74,135 @@
     <!-- side navbar -->
 
     <aside id="logo-sidebar"
-        class="fixed after:block top-0 left-0 z-40 sm:mt-16  w-60 h-screen pt-10 transition-transform -translate-x-full  sm:translate-x-0 bg-zinc-900"
+        class="fixed block md:hidden  after:block top-0 left-0 z-40 sm:mt-16  w-60 h-screen pt-10 transition-transform -translate-x-full  sm:translate-x-0 bg-zinc-900"
+        aria-label="Sidebar">
+        <div class="h-full px-3 pb-4 overflow-y-auto mt-16 md:mt-0 bg-zinc-900 ">
+            <ul class="space-y-4  font-bold">
+                <li data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar">
+                    <a href="/" aria-controls="logo-sidebar" type="button"
+                        class="flex items-center px-10 p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group ">
+                        <svg class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                        <span class="ml-3 whitespace-nowrap">Home</span>
+                    </a>
+                </li>
+
+                <li data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar">
+                    <a href="#home" aria-controls="logo-sidebar" type="button"
+                        class="flex items-center px-10  p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                        <span class="flex-1 ml-3 whitespace-nowrap">About</span>
+
+                    </a>
+
+                </li>
+                <li data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar">
+                    <a href="#project"
+                        class="flex items-center px-10 p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-6 h-6 text-gray-500">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 00-1.883 2.542l.857 6a2.25 2.25 0 002.227 1.932H19.05a2.25 2.25 0 002.227-1.932l.857-6a2.25 2.25 0 00-1.883-2.542m-16.5 0V6A2.25 2.25 0 016 3.75h3.879a1.5 1.5 0 011.06.44l2.122 2.12a1.5 1.5 0 001.06.44H18A2.25 2.25 0 0120.25 9v.776" />
+                        </svg>
+
+                        <span class="flex-1 ml-3 whitespace-nowrap">Projects</span>
+                    </a>
+                </li>
+                <li data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar">
+                    <a href="#skill"
+                        class="flex items-center px-10 p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="hc-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z" />
+                        </svg>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Skill</span>
+                    </a>
+                </li>
+                <li data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar">
+                    <a href="#contact"
+                        class="flex items-center px-10 p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="5.5" cy="11.5" r="4.5" />
+                            <circle cx="18.5" cy="11.5" r="4.5" />
+                            <line x1="5.5" y1="16" x2="18.5" y2="16" />
+                        </svg>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Contact</span>
+                    </a>
+                </li>
+                <li class="flex items-center py-4  rounded-lg dark:text-white  group">
+
+                    <span class="flex-1 ml-3 text-gray-500 whitespace-nowrap">Socials</span>
+
+                </li>
+                <li >
+                    <a href="https://www.instagram.com/ayushkumar_0911/"
+                        class="flex items-center px-10 p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="h-5 w-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Instagram</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/ayush-kumar-40302b258/"
+                        class="flex items-center px-10 p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="h-5 w-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                        <span class="flex-1 ml-3 whitespace-nowrap">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/Ayushkumar890"
+                        class="flex items-center px-10 p-3  text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="h-5 w-5  text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                        <span class="flex-1 ml-3 whitespace-nowrap">Git-Hub</span>
+                    </a>
+                    <a href="https://twitter.com/Ayush__890"
+                        class="flex items-center px-10 p-3  text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        <svg class="h-5 w-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                        </svg>
+
+                        <span class="flex-1 ml-3 whitespace-nowrap">Twitter</span>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+
+
+
+    <aside id="logo-sidebar"
+        class="fixed hidden md:block after:block top-0 left-0 z-40 sm:mt-16  w-60 h-screen pt-10 transition-transform -translate-x-full  sm:translate-x-0 bg-zinc-900"
         aria-label="Sidebar">
         <div class="h-full px-3 pb-4 overflow-y-auto mt-16 md:mt-0 bg-zinc-900 ">
             <ul class="space-y-4  font-bold">
                 <li>
                     <a href="/" aria-controls="logo-sidebar" type="button"
-                        class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group ">
+                        class="flex items-center px-10 p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group ">
                         <svg class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -93,7 +214,7 @@
 
                 <li>
                     <a href="#home" aria-controls="logo-sidebar" type="button"
-                        class="flex items-center px-10  p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        class="flex items-center px-10  p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="16 18 22 12 16 6" />
@@ -102,12 +223,11 @@
                         <span class="flex-1 ml-3 whitespace-nowrap">About</span>
 
                     </a>
-                    <!-- in the mobile navbar-->
 
                 </li>
                 <li>
                     <a href="#project"
-                        class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        class="flex items-center px-10 p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
 
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 text-gray-500">
@@ -120,7 +240,7 @@
                 </li>
                 <li>
                     <a href="#skill"
-                        class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        class="flex items-center px-10 p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="hc-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path
@@ -129,21 +249,9 @@
                         <span class="flex-1 ml-3 whitespace-nowrap">Skill</span>
                     </a>
                 </li>
-                <!-- <li>
-                    <a href="#home"
-                        class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="w-6 h-6 text-gray-500">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
-                        </svg>
-
-                        <span class="flex-1 ml-3 whitespace-nowrap">Services</span>
-                    </a>
-                </li> -->
                 <li>
                     <a href="#contact"
-                        class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        class="flex items-center px-10 p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="h-6 w-6 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="5.5" cy="11.5" r="4.5" />
@@ -160,7 +268,7 @@
                 </li>
                 <li>
                     <a href="https://www.instagram.com/ayushkumar_0911/"
-                        class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        class="flex items-center px-10 p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="h-5 w-5 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -172,7 +280,7 @@
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/ayush-kumar-40302b258/"
-                        class="flex items-center px-10 p-2 text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        class="flex items-center px-10 p-2 text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="h-5 w-5 text-blue-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -182,7 +290,7 @@
                         <span class="flex-1 ml-3 whitespace-nowrap">LinkedIn</span>
                     </a>
                     <a href="https://github.com/Ayushkumar890"
-                        class="flex items-center px-10 p-3  text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        class="flex items-center px-10 p-3  text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="h-5 w-5  text-green-500" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path
@@ -191,7 +299,7 @@
                         <span class="flex-1 ml-3 whitespace-nowrap">Git-Hub</span>
                     </a>
                     <a href="https://twitter.com/Ayush__890"
-                        class="flex items-center px-10 p-3  text-white dark:tex-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                        class="flex items-center px-10 p-3  text-white rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="h-5 w-5 text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path
@@ -208,8 +316,10 @@
 
     <!--end of side navbar -->
 
+    
 
-    <div class="pt-0 sm:ml-60 ">
+
+    <div class="pt-0 sm:ml-60 z-50">
 
         <!-- Home section -->
 
@@ -353,7 +463,9 @@
     <script>
         AOS.init();
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
 
     <script>
         // Get the modal
